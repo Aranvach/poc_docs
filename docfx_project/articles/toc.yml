@@ -1,2 +1,6 @@
-- name: Introduction
-  href: intro.md
+- name: Main Article
+  href: main.md
+- name: Secondary Article
+  href: secondary/second.md
+- name: Others
+  href: others/other.md

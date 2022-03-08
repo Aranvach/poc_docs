@@ -4,12 +4,21 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "EFaOiyg4AeW1rzxMI5Jy0OLIrUT+t/ZzqkAAqqv5DBE="
+          "hash": "EJaOolGTK1gKkS+eq0VvEzHxlHnpVY8IhacBsvV8ZjE="
         }
       },
       "is_incremental": false,
@@ -28,12 +37,47 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "articles/images/image2.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "articles/images/image2.JPG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
-      "source_relative_path": "articles/intro.md",
+      "source_relative_path": "articles/main.md",
       "output": {
         ".html": {
-          "relative_path": "articles/intro.html",
-          "hash": "S/G3DWaeawaQubmLO/JXyQoi2wsO997DUgRH+KdD7RQ="
+          "relative_path": "articles/main.html",
+          "hash": "BdJa7gQfghJHIB1yyRPoyjVicz4E4gxk5GdNkjjqJEo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/others/other.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/others/other.html",
+          "hash": "r002ae2zWxlKABXomQ416pgYYVqVXUU8gvo4YNaLP6A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/secondary/second.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/secondary/second.html",
+          "hash": "TepKphIuDFaqwm4nQdmvqSeJBp4wzTR6M8pnCxRlqOI="
         }
       },
       "is_incremental": false,
@@ -45,7 +89,18 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+          "hash": "TZNqx3xdtNVfeg32F1zK/GW9hwvUFECaUzDb7W4pxZY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/image1.JPG",
+      "output": {
+        "resource": {
+          "relative_path": "images/image1.JPG"
         }
       },
       "is_incremental": false,
@@ -57,7 +112,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "Kue9znsiU1OnHuWGeIZKONvYLiSPLgdd50c+bEFJt4c="
+          "hash": "Z3SqZpplUzRoHqNYG56Hkc9gN3DQS5miqg/+NhZqNC8="
         }
       },
       "is_incremental": false,
@@ -69,7 +124,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "WSuRrYiGwKKMbtdG9z8W9fXmLoCyTnGg9AxbPKLXm2Y="
+          "hash": "5DQf3YgdnrOpEitzk6R8Za8HRuwzsAQGMZd+4Is/Gqo="
         }
       },
       "is_incremental": false,
@@ -79,18 +134,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 3,
+          "total_file_count": 5,
+          "skipped_file_count": 5
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
@@ -105,7 +165,7 @@
     {
       "status": {
         "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0
